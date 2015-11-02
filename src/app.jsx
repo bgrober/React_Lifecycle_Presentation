@@ -45,6 +45,7 @@ var App = React.createClass({
     setInterval(this.update, 1000);
   },
   shouldComponentUpdate: function(nextProps, nextState) {
+    console.log(this.state.count);
     if(nextState.count > 5) return false;
     return true;
   },
