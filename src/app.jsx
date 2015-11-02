@@ -12,9 +12,7 @@ var ReactMixin = {
   componentWillMount: function() {
     console.log('this will mount');
   },
-  componentShouldUpdate: function(nextProps, nextState) {
-    console.log(nextProps, nextState);
-  },
+
   update: function() {
     var countUp = this.state.count;
     countUp++;
@@ -24,6 +22,10 @@ var ReactMixin = {
 
 var Welcome = React.createClass({
   mixins: [ReactMixin],
+  shouldComponentUpdate: function(nextProps, nextState) {
+    if(nextState.count > 10) return false;
+    return true;
+  },
   render: function() {
     return (<div>
       This.state.foo: {this.state.count} <br />
@@ -41,6 +43,10 @@ var App = React.createClass({
   mixins: [ReactMixin],
   componentWillMount: function() {
     setInterval(this.update, 1000);
+  },
+  shouldComponentUpdate: function(nextProps, nextState) {
+    if(nextState.count > 5) return false;
+    return true;
   },
   render: function() {
     return (
