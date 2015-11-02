@@ -73,9 +73,8 @@ var App = React.createClass({
       return {id: 1};
   },
 
-  update: function(e) {
+  update: function() {
      console.log('Updating Props');
-     console.log(e);
      var count = this.state.id;
      count++;
      this.setState({id: count});
