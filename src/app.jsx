@@ -12,6 +12,9 @@ var ReactMixin = {
   componentWillMount: function() {
     console.log('this will mount');
   },
+  componentShouldUpdate: function(nextProps, nextState) {
+    console.log(nextProps, nextState);
+  },
   update: function() {
     var countUp = this.state.count;
     countUp++;
