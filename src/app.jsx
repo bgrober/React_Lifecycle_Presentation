@@ -41,7 +41,7 @@ var Welcome = React.createClass({
 
 var App = React.createClass({
   mixins: [ReactMixin],
-  componentWillMount: function() {
+  componentDidMount: function() {
     setInterval(this.update, 1000);
   },
   shouldComponentUpdate: function(nextProps, nextState) {
