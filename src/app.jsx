@@ -46,8 +46,8 @@ var Child = React.createClass({
   shouldComponentUpdate: function(nextProps, nextState) {
     console.log('ShouldComponentUpdate');
     console.log(nextProps.bar, nextState.foo);
-    return nextProps.bar === nextState.foo ? false : true;
-    return true;
+    // return nextProps.bar === nextState.foo ? false : true;
+    // return true;
   },
 
   componentWillReceiveProps: function(nextProps) {
@@ -71,7 +71,6 @@ var App = React.createClass({
   getInitialState: function() {
       return {id: 1};
   },
-
   update: function() {
      console.log('Updating Props');
      var count = this.state.id;
