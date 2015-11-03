@@ -26,7 +26,7 @@ var Welcome = React.createClass({
     console.log('Render');
     return (<div>
       This.state.foo: {this.state.foo} <br />
-      This.state.bar: {this.props.bar}
+    This.props.bar: {this.props.bar}
       <br/>
       <hr/>
       <button className="btn btn-success"
