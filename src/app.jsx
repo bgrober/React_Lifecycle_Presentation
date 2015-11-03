@@ -4,7 +4,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var _ = require('lodash');
 // tutorial1.js
-var Welcome = React.createClass({
+var Child = React.createClass({
   getInitialState: function() {
     console.log('GetInitialState');
     return {foo : 1};
@@ -84,7 +84,7 @@ var App = React.createClass({
     return (
       <div>
       <hr/>
-      <Welcome bar={this.state.id} />
+      <Child bar={this.state.id} />
       <hr />
       <button type="button" className="btn btn-primary"
         onClick={this.update} onTouchStart={this.update}>
