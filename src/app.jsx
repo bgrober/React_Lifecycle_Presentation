@@ -20,7 +20,7 @@ var ReactMixin = {
   },
 };
 
-var Welcome = React.createClass({
+var Child = React.createClass({
   mixins: [ReactMixin],
   shouldComponentUpdate: function(nextProps, nextState) {
     if(nextState.count > 10) return false;
@@ -53,7 +53,7 @@ var App = React.createClass({
     return (
       <div>
       <hr/>
-      <Welcome/>
+      <Child/>
       <hr />
       <label>
         {this.state.count}
