@@ -26,7 +26,7 @@ var App = React.createClass({
         {this.state.txt}
         <hr/>
         <Widget ref='red' txt={this.state.txt} update={this.update}/>
-        <label>{this.state.red}</label><br/>
+        <label>{Base62.encode("band of horses")}</label><br/>
         <Widget ref='green' txt={this.state.txt} update={this.update}/>
         <label>{this.state.green}</label><br/>
         <Widget ref='blue' txt={this.state.txt} update={this.update}/>
